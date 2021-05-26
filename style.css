@@ -1,0 +1,98 @@
+/*Creation des variables en css*/
+:root{
+    --title: #f8c27a;
+    --textShadow: 0 2px 2px rgba(0,0,0,.7); /*l'ombre*/
+    --boxShadow: 0 2px 10px rgba(0,0,0,.2); /*Pour les boites*/
+}
+
+/*L'etoile sert à séléctionner tous l'html*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*C'est la dimension des éléments*/
+}
+
+body{
+    font-size: 14px;
+    width: 100vw;              /*largeur*/
+    overflow: hidden;   /*Pour que tous tiennent sur une page (pour ne pas avoir de problème en scroll)*/
+    height: 100vh;      /*Hauteur*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: var(--boxShadow);       /*On rappelle notre variable*/
+}
+
+h1{
+    margin-bottom: 15px;
+    color: #ffc31d;
+    text-shadow: var(--textShadow);     /*Rappel de la variable (pour l'ombre)*/
+    display: inline-block;
+}
+
+
+.vies{
+    margin: 10px;
+}
+
+.ion-icon{
+    font-size: 50px;
+    fill: red;
+}
+
+/*Le formulaire d'envoie tous entier*/
+#inputBox{
+    background-color: #06c7f77e;
+    padding: 15px;
+    border-radius: 5px;
+}
+/*Le label du bloc*/
+#inputBox > label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+button{
+    outline: none;     
+    border: none;
+    padding: 3px 20px;
+    border-radius: 5px;
+}
+
+button{
+    background-color: teal;
+    color: #ffff;
+    cursor: pointer;                   /*C'est le curseur qui change quand tu passe sur un lien*/
+    transform: all .2s;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    background-color: rgb(0, 184, 184) ; 
+    /*Pour que quand tu passe avec le curseur sur le bouton, le bouton devient plus clair*/
+}
+
+p#message{
+    margin: 20px auto 0 auto;
+}
+
+#rejouer{
+    display: none;
+    margin: 5px auto 0 auto;
+}
+
+#details{
+    font-weight: bold;
+    font-size: 6px;
+    margin-top: 5px;
+}
