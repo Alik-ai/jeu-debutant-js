@@ -11,8 +11,8 @@ const body = document.getElementsByTagName("body")[0];
 
 //Modèle de coeurs
 
-const coeurVide = '<i class="bi bi-heart"></i>'
-const coeurPlein = '<i class="bi bi-heart-fill"></i>'
+const coeurVide = '<i class="bi bi-heart ion-icon"></i>';
+const coeurPlein = '<i class="bi bi-heart-fill ion-icon"></i>';
 //Fond 
 const bgFroid = 'linear-gradient(to top, #5ee7df 0%, #b490ca 100%)';
 const bgTiede = 'linear-gradient(to top, #30cfd0 0%, #330867 100%)';
@@ -100,16 +100,16 @@ const play = () => {
                             // ceci est un tableau
         let tableauDeVies = [];
                     //c'est ce qui calcul tous nos coeur qu'on doit avoir
-        for (let i = 0; i < vies; i++){
+                    
+        for(let i = 0; i < vies; i++){
             tableauDeVies.push(coeurPlein);
-        }           
-                    //c'est le calcul pour ajouter des coeurs vides
-        for (let i = 0; i<totalVie - vies; i++){
+        }                           //c'est le calcul pour ajouter des coeurs vides
+        for(let i = 0; i < totalVie - vies; i++){
             tableauDeVies.push(coeurVide);
         }
         //ca ajoute tous ceci a l'html
         tableauDeVies.forEach(coeur =>{
-            divVies.innerHtML += coeur;
+            divVies.innerHTML += coeur;
         })
     }
     actualiseCoeurs(vies);
